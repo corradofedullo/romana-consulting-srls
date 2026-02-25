@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romana Consulting Srls di Corrado Fedullo</title>
+<style>
+    /* RESET E BASE */
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background-color:#f9f9f9; color:#333; }
+    a { text-decoration:none; }
+    h1,h2,h3 { margin:0 0 10px 0; }
+    section { padding:60px 20px; }
+
+    /* HEADER */
+    header {
+        background-color:#003366;
+        color:white;
+        padding:20px;
+        text-align:center;
+    }
+    header nav { margin-top:10px; }
+    header nav a {
+        color:white;
+        margin:0 10px;
+        font-weight:bold;
+        padding:5px 10px;
+        border-radius:4px;
+    }
+    header nav a.btn-preventivo {
+        background-color:#0055aa;
+    }
+    header nav a.btn-preventivo:hover { background-color:#0077dd; }
+
+    /* PRIMA IMMAGINE */
+    #hero {
+        width:100%;
+    }
+    #hero img {
+        width:100%;
+        height:auto;
+        display:block;
+    }
+
+    /* TESTO SOTTO HERO */
+    #hero-text {
+        text-align:center;
+        max-width:800px;
+        margin:30px auto 60px auto;
+        font-size:1.1em;
+        line-height:1.6em;
+    }
+    #hero-text h2 {
+        font-size:2.5em;
+        margin-bottom:15px;
+        color:#003366;
+    }
+
+    /* DUE IMMAGINI CENTRALI */
+    #hero-small {
+        display:flex;
+        justify-content:center;
+        gap:50px;
+        margin-bottom:60px;
+    }
+    #hero-small div {
+        text-align:center;
+    }
+    #hero-small img {
+        width:220px;
+        height:220px;
+        object-fit:cover;
+        border-radius:10px;
+        display:block;
+        margin-bottom:10px;
+        box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* SERVIZI (RC AUTO e FIDEIUSSIONI) */
+    .service {
+        background-color:white;
+        padding:30px;
+        margin-bottom:60px;
+        border-radius:10px;
+        box-shadow:0 4px 12px rgba(0,0,0,0.05);
+        max-width:800px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .service img {
+        width:100%;
+        max-width:500px;
+        border-radius:10px;
+        margin-bottom:15px;
+        display:block;
+    }
+
+    /* FORM */
+    form label { display:block; margin-bottom:10px; font-weight:bold; }
+    form input { width:100%; padding:8px; margin-top:3px; border-radius:4px; border:1px solid #ccc; }
+    button {
+        background-color:#003366;
+        color:white;
+        padding:10px 15px;
+        border:none;
+        border-radius:4px;
+        cursor:pointer;
+        margin-top:10px;
+    }
+    button:hover { background-color:#0055aa; }
+
+    /* UL */
+    ul { list-style: disc; padding-left:20px; margin-bottom:15px; }
+
+    /* CONTATTI */
+    #contatti { text-align:center; padding:60px 20px; }
+    #contatti p { margin:5px 0; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Romana Consulting Srls</h1>
+    <nav>
+        <a href="#chi-siamo">Chi siamo</a>
+        <a href="#rc-auto">RC Auto</a>
+        <a href="#fideiussioni">Fideiussioni</a>
+        <a href="#contatti">Contatti</a>
+        <a href="#preventivo" class="btn-preventivo">Richiedi preventivo gratuito</a>
+    </nav>
+</header>
+
+<!-- HERO GRANDE -->
+<section id="hero">
+    <img src="romanaconsulting.jpg" alt="Romana Consulting">
+</section>
+
+<!-- TESTO SOTTO HERO -->
+<section id="hero-text">
+    <h2>Romana Consulting Srls</h2>
+    <p>La Romana Consulting Srls offre consulenza specializzata nel settore assicurativo, con un focus su RCA, fideiussioni e cauzioni. Collaboriamo con primarie compagnie assicurative per garantire soluzioni personalizzate, competitive e trasparenti. Il nostro obiettivo è tutelare clienti privati e aziende, offrendo assistenza costante prima, durante e dopo la stipula del contratto.</p>
+</section>
+
+<!-- DUE IMMAGINI CENTRALI -->
+<section id="hero-small">
+    <div>
+        <img src="romana.jpg" alt="Romana">
+        <p>Romana</p>
+    </div>
+    <div>
+        <img src="consulting.jpg" alt="Consulting">
+        <p>Consulting</p>
+    </div>
+</section>
+
+<!-- RC AUTO -->
+<section id="rc-auto" class="service">
+    <img src="rcauto.jpg" alt="RC Auto">
+    <h2>RC Auto</h2>
+    <p>Confrontiamo preventivi tra diverse compagnie per offrirti il premio più vantaggioso.</p>
+    <ul>
+        <li>Prima</li>
+        <li>Euroherc</li>
+        <li>AXA</li>
+        <li>Adriatic</li>
+        <li>Genial Più</li>
+        <li>Zurich</li>
+        <li>Cattolica</li>
+    </ul>
+    <h3>Richiedi Preventivo Gratuito</h3>
+    <form action="https://formspree.io/f/mgolrgkl" method="POST" enctype="multipart/form-data">
+        <label>Nome e Cognome:<input type="text" name="nome" required></label>
+        <label>Telefono:<input type="text" name="telefono" required></label>
+        <label>Email:<input type="email" name="email" required></label>
+        <label>Targa Auto:<input type="text" name="targa"></label>
+        <label>Allega Libretto Auto:<input type="file" name="libretto"></label>
+        <label>Allega Documento o Patente:<input type="file" name="documento"></label>
+        <button type="submit">Invia</button>
+    </form>
+</section>
+
+<!-- FIDEIUSSIONI -->
+<section id="fideiussioni" class="service">
+    <img src="fideiussioni.jpg" alt="Fideiussioni">
+    <h2>Fideiussioni / Cauzioni</h2>
+    <p>Offriamo fideiussioni assicurative collaborando con primarie agenzie, garantendo soluzioni rapide e personalizzate.</p>
+    <h3>Richiedi Preventivo Gratuito</h3>
+    <form action="https://formspree.io/f/mgolrgkl" method="POST">
+        <label>Nome e Cognome:<input type="text" name="nome" required></label>
+        <label>Telefono:<input type="text" name="telefono" required></label>
+        <label>Email:<input type="email" name="email" required></label>
+        <label>Tipologia di Fideiussione:<input type="text" name="tipologia"></label>
+        <button type="submit">Invia</button>
+    </form>
+</section>
+
+<!-- CONTATTI -->
+<section id="contatti">
+    <h2>Contatti</h2>
+    <p>Socio Unico / Amministratore: Corrado Fedullo</p>
+    <p>Telefono: 351 976 6693</p>
+    <p>Email: <a href="mailto:romanaconsulting@yahoo.it">romanaconsulting@yahoo.it</a></p>
+    <p>Sede: Via Spinoza, Roma</p>
+    <p>Iscrizione RUI: E000536193</p>
+</section>
+
+</body>
+</html>
